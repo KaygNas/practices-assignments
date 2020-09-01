@@ -72,6 +72,9 @@ th, td {
 }
 
 th {
+    background-image: -webkit-linear-gradient(#84961f, #30a500);
+    background-image: -moz-linear-gradient(#84961f, #30a500);
+    background-image: -o-linear-gradient(#84961f, #30a500);
     background-image: linear-gradient(#84961f, #30a500);
     color: #fff;
     border-bottom: 3px solid #b5ff00;
