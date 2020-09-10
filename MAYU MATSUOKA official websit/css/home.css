@@ -1,0 +1,267 @@
+@font-face {
+    font-family: "ebgaramond08";
+    src: url("../font/ebgaramond08-regular.woff") format("woff");
+}
+
+@font-face {
+    font-family: "kozminpr6n";
+    src: url("../font/kozminpr6n-regular.woff") format("woff");
+}
+
+/*幻灯片 CSS 部分开始*/
+.main {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+
+.home {
+    width: 100%;
+    height: 100%;
+}
+
+.home__visual {
+    width: 100%;
+    height: 100%;
+}
+
+.home__visual__inner {
+    width: 100%;
+    height: 100%;
+}
+
+.home__visual__slide {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    z-index: 0;
+    width: 0%;
+    height: 98%;
+    overflow: hidden;
+    will-change: width;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+    /* transition: transform 2.2s，width 2.2s; */
+}
+
+.home__visual__slide.is-current {
+    display: block;
+    z-index: 1;
+    width: 98%;
+}
+
+.home__visual__slide.is-anim {
+    display: block;
+    z-index: 2;
+    width: 98%;
+    transition: width 1.4s ease-out;
+}
+
+.home__visual__scroll {
+    width: calc(100% + 200px);
+    height: 100%;
+    position: relative;
+    transform: translate3d(0, 0, 0);
+}
+
+.home__visual__slide.is-scroll {
+    backface-visibility: hidden;
+}
+
+.home__visual__slide.is-scroll .home__visual__scroll {
+    transform: translate3d(-200px, 0, 0);
+    transition: transform 8s linear;
+}
+
+.home__visual__img {
+    background: url("../img/home/top1.jpg") no-repeat right;
+    background-size: cover;
+    width: 110rem;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate3d(0, 0, 0);
+    backface-visibility: hidden;
+}
+
+.home__visual__img_1 {
+    background-image: url("../img/home/top1.jpg");
+    background-position: right top;
+}
+
+.home__visual__img_2 {
+    background-image: url("../img/home/top2.jpg");
+    background-position: right bottom;
+}
+
+.home__visual__img_3 {
+    background-image: url("../img/home/top3.jpg");
+    background-position: right top;
+}
+
+.home__visual__img_4 {
+    background-image: url("../img/home/top4.jpg");
+    background-position: right top;
+}
+
+.home__visual__img_5 {
+    background-image: url("../img/home/top5.jpg");
+    background-position: right top;
+}
+
+/*幻灯片 CSS 部分结束*/
+
+/* 开头 intro 部分开始*/
+.intro {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    transform: translate3d(0, 0, 0);
+    will-change: opacity;
+}
+
+.intro__inner {
+    width: 420px;
+    height: 174px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    transform: translate3d(0, -105px, 0);
+    will-change: opacity;
+    transform: scale(1);
+}
+
+.intro__name {
+    width: 410px;
+    height: 108px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform: translate3d(0, 0, 0);
+    will-change: opacity;
+}
+
+.intro__site {
+    width: 272px;
+    height: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    opacity: 0;
+    filter: alpha(opacity=0);
+    transform: translate3d(0, 0, 0);
+}
+
+.intro__name img,
+.intro__site img {
+    width: 100%;
+    height: auto;
+}
+
+/* 开头 intro 部分结束*/
+
+.container {
+    font-family: "ebgaramond08";
+    width: 94.5vw;
+    height: 92vh;
+    padding: 1%;
+    margin: 1%;
+    position: relative;
+    z-index: 100;
+}
+
+img,
+a {
+    display: inline-block;
+    background-color: #fff;
+
+}
+
+h1>img {
+    padding: 12px;
+}
+
+a {
+    padding: 6px 10px;
+}
+
+.side-text {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    right: 2vw;
+    height: 92vh;
+}
+
+.side-text div img {
+    width: 14px;
+    padding: 4px;
+}
+
+.side-text>div:first-child {
+    margin: 4px 0 auto 0;
+}
+
+.side-text>div:last-child {
+    margin: auto 0 4px 0;
+}
+
+.content {
+    margin: 0 auto 0 4vh;
+    display: flex;
+    flex-direction: column;
+    height: 94vh;
+}
+
+.top-logo {
+    font-display: none;
+    margin: 6vh 0 0 0;
+}
+
+.top-logo img {
+    display: block;
+    height: 26px;
+    margin: 0 0 2vh 0;
+}
+
+.navigation {
+    margin: 10vh 0 0 0;
+
+}
+
+.navigation>ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 36vh;
+    list-style-type: none;
+    font-size: 28px;
+    line-height: 20px;
+}
+
+.bottom {
+    margin: auto 0 4vh 0;
+}
+
+a img {
+    height: 12px;
+    padding: 0;
+}
+
+.bottom div:nth-last-child(2) {
+    margin: auto 0 2vh 0;
+}
