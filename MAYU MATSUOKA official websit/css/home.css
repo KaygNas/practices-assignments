@@ -127,6 +127,7 @@
 }
 
 .intro__inner {
+    display: block;
     width: 420px;
     height: 174px;
     position: absolute;
@@ -134,10 +135,15 @@
     left: 0;
     right: 0;
     margin: auto;
-    transform: translate3d(0, -105px, 0);
     will-change: opacity;
-    transform: scale(1);
+    transform: scale(1.2, 1.2) translate(0, -50%);
 }
+
+.recover {
+    transform: scale(1, 1) translate(0, -50%);
+    transition: transform 1.6s;
+}
+
 
 .intro__name {
     width: 410px;

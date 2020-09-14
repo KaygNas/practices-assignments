@@ -53,6 +53,7 @@ img {
 }
 
 .top-nav .btn-group a {
+    display: inline-block;
     margin-left: 10px;
     padding: 0 10px;
     font-size: 12px;
@@ -77,6 +78,8 @@ img {
 .top-nav-content {
     background-color: #f5f5f5;
     font-size: 16px;
+    height: 0px;
+    overflow: hidden;
 }
 
 
